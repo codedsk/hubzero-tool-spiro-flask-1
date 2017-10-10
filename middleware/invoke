@@ -2,9 +2,8 @@
 
 /usr/bin/invoke_app "$@" -t spiroflask1 \
     -u wrwroxy-0.1 \
-    -u anaconda-4.1 \
     -w "none" \
-    -e "FLASK_APP=@tool/www/run.py"
-    -c "xview -fullscreen -onroot \${JUPYTER_LOGO_PATH}" \
+    -e "FLASK_APP=@tool/www/run.py" \
+    -c "xview -fullscreen -onroot @tool/doc/flask.png" \
     -c "wrwroxy --stream-log --logfile /dev/null" \
-    -C "flask run --host 0.0.0.0 --port 8001"
+    -C "@tool/bin/run_flask.sh --host 0.0.0.0 --port 8001"
