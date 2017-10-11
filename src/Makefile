@@ -50,7 +50,7 @@ virtual:
 	fi; \
 	if test ! -d "${WWWDIR}/$(VIRTUAL_ENV)"; then \
 	  PY_VERSION_MM=`python --version 2>&1 | cut -d' ' -f2 | cut -d'.' -f1-2`; \
-	  export PYTHONPATH=${LOCAL_PY}/lib/python${PY_VERSION_MM}/site-packages:${PYTHONPATH}; \
+	  export PYTHONPATH=${LOCAL_PY}/lib/python$${PY_VERSION_MM}/site-packages:${PYTHONPATH}; \
 	  $(LOCAL_PY)/bin/virtualenv ${WWWDIR}/$(VIRTUAL_ENV); \
 	  . ${WWWDIR}/$(VIRTUAL_ENV)/bin/activate; \
 	  pip install -r $(WWWDIR)/requirements.txt; \
